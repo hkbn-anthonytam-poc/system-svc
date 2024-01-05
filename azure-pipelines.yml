@@ -43,7 +43,8 @@ steps:
     #addPipelineData: true # boolean. Add Pipeline metadata to image(s). Default: true.
     #addBaseImageData: true # boolean. Add base image metadata to image(s). Default: true.
     #container: # string. Optional. Use when command = start || command = stop. Container.
-- script: docker build -t system-svc .    
+- script: docker build -t system-svc . 
+  condition: always()   
 # - task: PublishBuildArtifacts@1
   # inputs:
     # PathtoPublish: '$(Build.ArtifactStagingDirectory)'
