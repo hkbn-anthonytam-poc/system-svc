@@ -43,7 +43,7 @@ steps:
     #addPipelineData: true # boolean. Add Pipeline metadata to image(s). Default: true.
     #addBaseImageData: true # boolean. Add base image metadata to image(s). Default: true.
     #container: # string. Optional. Use when command = start || command = stop. Container.
-- script: ver
+- script: whoami
   condition: always()   
 # - task: PublishBuildArtifacts@1
   # inputs:
