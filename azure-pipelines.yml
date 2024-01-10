@@ -23,12 +23,6 @@ steps:
     goals: 'package'
   condition: always()
   
-# - task: CopyFiles@2
-  # inputs:
-    # Contents: '**'
-    # TargetFolder: '$(build.artifactstagingdirectory)'
-  # condition: succeeded()
-
 - task: Docker@2
   inputs:
   # Container Repository
@@ -44,22 +38,3 @@ steps:
     #addBaseImageData: true # boolean. Add base image metadata to image(s). Default: true.
     #container: # string. Optional. Use when command = start || command = stop. Container.
  
-# - task: PublishBuildArtifacts@1
-  # inputs:
-    # PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    # ArtifactName: 'drop'
-    # publishLocation: 'Container'
-  # condition: succeeded()
-# - task: Maven@3
-  # inputs:
-    # mavenPomFile: 'pom.xml'
-    # mavenOptions: '-Xmx3072m'
-    # javaHomeOption: 'JDKVersion'
-    # jdkVersionOption: '1.17'
-    # jdkArchitectureOption: 'x64'
-    # mavenAuthenticateFeed: true
-    # publishJUnitResults: false
-    # testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    # goals: 'deploy'
-    # options: '-s settings.xml'
-
