@@ -1,0 +1,19 @@
+jobs:
+  - deployment: dev
+    environment: dev
+    strategy: 
+      runOnce:
+        deploy:
+          pool:
+            name: UK Agent Pools
+          steps:
+            - script: echo Hello
+            - script: echo Step 2
+        on:
+          success:
+            pool:
+              name: UK Agent Pools
+            steps:
+              - script: Success
+
+ 
