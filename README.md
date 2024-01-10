@@ -1,4 +1,4 @@
-# Backend Microservices System API Template (Java) - Test
+# Backend Microservices System API Template (Java)
 Last Update: 30 October 2023
 
 ## Introduction 
